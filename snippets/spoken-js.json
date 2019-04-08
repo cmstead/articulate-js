@@ -1,0 +1,135 @@
+{
+    "Variable Initialization": {
+        "prefix": "variable-initialization-spoken",
+        "body": [
+            "${1|const,let,var|} ${2:Variable Name} = ${3:Variable Value};"
+        ],
+        "description": "Initialize a new variable at your cursor"
+    },
+    "Variable Declaration": {
+        "prefix": "variable-declaration-spoken",
+        "body": [
+            "${1|const,let,var|} ${2:Variable Name};"
+        ],
+        "description": "Declare a variable at your cursor"
+    },
+    "Function Definition": {
+        "prefix": "function-definition-spoken",
+        "body": [
+            "function ${1:Function Name} (${2:Parameters}) {",
+            "    ${TM_SELECTED_TEXT}$0",
+            "}"
+        ],
+        "description": "Create a new named function definition at your cursor or around a selection"
+    },
+    "Function  Expression": {
+        "prefix": "function-expression-spoken",
+        "body": [
+            "function (${2:Parameters}) {",
+            "    ${TM_SELECTED_TEXT}$0",
+            "}"
+        ],
+        "description": "Create a new function expression at your cursor or around a selection"
+    },
+    "Arrow Function": {
+        "prefix": "arrow-function-spoken",
+        "body": [
+            "(${1:Parameters}) => $0"
+        ],
+        "description": "Create a new arrow function at your cursor"
+    },
+    "Immediately Invoked Function Expression (IIFE)": {
+        "prefix": "immediately-invoked-function-expression-spoken",
+        "body": [
+            "(function (${1:Parameters}) {",
+            "    ${TM_SELECTED_TEXT}$0",
+            "})($1)"
+        ],
+        "description": "Create a new IIFE at your cursor or around a selection"
+    },
+    "Function Call": {
+        "prefix": "function-call-spoken",
+        "body": [
+            "${1:Function Name}(${2:Arguments})"
+        ],
+        "description": "Create a new call to a function at your cursor"
+    },
+    "Function Call With Context": {
+        "prefix": "function-call-with-context-spoken",
+        "body": [
+            "${1:Function Name}.call(${2:Context}, ${3:Arguments})"
+        ],
+        "description": "Create new function call with object context at cursor"
+    },
+    "Function Binding": {
+        "prefix": "function-binding-spoken",
+        "body": [
+            "${1:Function Name}.bind(${2:Context}, ${3:Arguments})"
+        ],
+        "description": "Create new function binding at cursor"
+    },
+    "Function Application": {
+        "prefix": "function-application-spoken",
+        "body": [
+            "${1:Function Name}.apply(${2:Context}, [${3:Agruments}])"
+        ],
+        "description": "Create new function application at cursor"
+    },
+    "If Block": {
+        "prefix": "if-block-spoken",
+        "body": [
+            "if (${1:Condition}) {",
+            "    ${TM_SELECTED_TEXT}$0",
+            "}"
+        ],
+        "description": "Create a new if block at your cursor or around a selection"
+    },
+    "Else-If Block": {
+        "prefix": "else-if-block-spoken",
+        "body": [
+            "else (${1:Condition}) {",
+            "    ${TM_SELECTED_TEXT}$0",
+            "}"
+        ],
+        "description": "Create a new else block at your cursor or around a selection"
+    },
+    "Else Block": {
+        "prefix": "else-block-spoken",
+        "body": [
+            "else {",
+            "    ${TM_SELECTED_TEXT}$0",
+            "}"
+        ],
+        "description": "Create a new else block at your cursor or around a selection"
+    },
+    "Loop For": {
+        "prefix": "loop-for-spoken",
+        "body": [
+            "for (let ${1:i = ${2:Initial Value}}; ${3:i ${4|<,>|} ${5:array.length}}; ${6:i ${7|++,--|}}) {",
+            "    ${TM_SELECTED_TEXT}$0",
+            "}"
+        ],
+        "description": "Create a for loop at your current cursor position or around a selection"
+    },
+    "String Literal": {
+        "prefix": "string-literal-spoken",
+        "body": [
+            "${1|',`,\"|}$0${1}"
+        ],
+        "description": "Insert a string literal at your cursor"
+    },
+    "String -- Template Variable": {
+        "prefix": "string-template-variable-spoken",
+        "body": [
+            "${$0}"
+        ],
+        "description": "Insert a template literal variable at your cursor"
+    },
+    "Console Method Call": {
+        "prefix": "console-method-call-spoken",
+        "body": [
+            "console.${1|log,debug,error,assert|}(${2:Message});"
+        ],
+        "description": "Insert a new console log at your cursor"
+    }
+}

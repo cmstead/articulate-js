@@ -1,65 +1,47 @@
-# spoken-js README
+# Spoken JS #
 
-This is the README for your extension "spoken-js". After writing up a brief description, we recommend including the following sections.
+Spoken JS is a tool to help developers talk about code and write software in a conversational way. The goal is, not only, to make pairing and mobbing easier while working with Javascript, but to also create a meta-interface for developers to use which will provide the following benefits:
 
-## Features
+- Make code structure more consistent
+- Separate logical flow from syntax specifics
+- Reduce typing mistakes
+- Automate code generation through common language and vocabulary
+- Automate common small code modifications
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Installing Spoken JS ##
 
-For example if there is an image subfolder under your extension project workspace:
+1. Open Visual Studio Code
+2. Open extension sidebar item
+3. Search for `Spoken JS`
+4. Click **install** button
+5. Click **reload** to complete installation
 
-\!\[feature X\]\(images/feature-x.png\)
+## Using Spoken JS ##
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### Snippets ###
 
-## Requirements
+The bulk of Spoken JS is currently snippets.  These snippets are built with the maximum amount of assistance possible, including supporting capturing highlighted text for inclusion in the output code, selection dropdowns for common options and so on.  Be sure to tab through all tab-stopped options to see what kind of assistance the snippets can provide.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Variable Initialization
+- Variable Declaration
+- Function Definition
+- Function  Expression
+- Arrow Function
+- Immediately Invoked Function Expression (IIFE)
+- Function Call
+- Function Call With Context
+- Function Binding
+- Function Application
+- If Block
+- Else-If Block
+- Else Block
+- Loop For
+- String Literal
+- String -- Template Variable
+- Console Method Call
 
-## Extension Settings
+## Version History ##
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+**v1.0.0**
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+First release
