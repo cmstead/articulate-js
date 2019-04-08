@@ -71,7 +71,7 @@
     "Function Application": {
         "prefix": "ajs-function-application",
         "body": [
-            "${1:Function Name}.apply(${2:Context}, [${3:Agruments}])"
+            "${1:Function Name}.apply(${2:Context}, [${3:Arguments}])"
         ],
         "description": "Create new function application at cursor"
     },
