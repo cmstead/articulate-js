@@ -1,6 +1,6 @@
 {
-	"name": "spoken-js",
-	"displayName": "Spoken JS",
+	"name": "articulate-js",
+	"displayName": "Articulate JS",
 	"description": "An extension to refocus JS development around talking about logic instead of raw code",
 	"version": "1.0.0",
 	"publisher": "cmstead",
@@ -18,7 +18,7 @@
 		"snippets": [
 			{
 				"language": "javascript",
-				"path": "./snippets/spoken-js.json"
+				"path": "./snippets/articulate-js.json"
 			}
 		]
 	},

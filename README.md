@@ -1,6 +1,6 @@
-# Spoken JS #
+# Articulate JS #
 
-Spoken JS is a tool to help developers talk about code and write software in a conversational way. The goal is, not only, to make pairing and mobbing easier while working with Javascript, but to also create a meta-interface for developers to use which will provide the following benefits:
+Articulate JS is a tool to help developers talk about code and write software in a conversational way. The goal is, not only, to make pairing and mobbing easier while working with Javascript, but to also create a meta-interface for developers to use which will provide the following benefits:
 
 - Make code structure more consistent
 - Separate logical flow from syntax specifics
@@ -8,19 +8,19 @@ Spoken JS is a tool to help developers talk about code and write software in a c
 - Automate code generation through common language and vocabulary
 - Automate common small code modifications
 
-## Installing Spoken JS ##
+## Installing Articulate JS ##
 
 1. Open Visual Studio Code
 2. Open extension sidebar item
-3. Search for `Spoken JS`
+3. Search for `Articulate JS`
 4. Click **install** button
 5. Click **reload** to complete installation
 
-## Using Spoken JS ##
+## Using Articulate JS ##
 
 ### Snippets ###
 
-The bulk of Spoken JS is currently snippets.  These snippets are built with the maximum amount of assistance possible, including supporting capturing highlighted text for inclusion in the output code, selection dropdowns for common options and so on.  Be sure to tab through all tab-stopped options to see what kind of assistance the snippets can provide.
+The bulk of Articulate JS is currently snippets.  These snippets are built with the maximum amount of assistance possible, including supporting capturing highlighted text for inclusion in the output code, selection dropdowns for common options and so on.  Be sure to tab through all tab-stopped options to see what kind of assistance the snippets can provide.
 
 - Variable Initialization
 - Variable Declaration
