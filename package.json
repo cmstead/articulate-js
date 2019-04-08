@@ -1,6 +1,6 @@
 {
 	"name": "spoken-js",
-	"displayName": "spoken-js",
+	"displayName": "Spoken JS",
 	"description": "An extension to refocus JS development around talking about logic instead of raw code",
 	"version": "1.0.0",
 	"publisher": "cmstead",
