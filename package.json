@@ -4,6 +4,9 @@
 	"description": "An extension to refocus JS development around talking about logic instead of raw code",
 	"version": "1.1.1",
 	"publisher": "cmstead",
+	"repository": {
+		"url": "https://github.com/cmstead/articulate-js.git"
+	},
 	"engines": {
 		"vscode": "^1.32.0"
 	},
