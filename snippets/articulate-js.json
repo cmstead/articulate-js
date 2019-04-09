@@ -16,16 +16,16 @@
     "Function Definition": {
         "prefix": "ajs-function-definition",
         "body": [
-            "function ${1:Function Name} (${2:Parameters}) {",
+            "${1|function,async function|} ${2:Function Name} (${3:Parameters}) {",
             "    ${TM_SELECTED_TEXT}$0",
             "}"
         ],
         "description": "Create a new named function definition at your cursor or around a selection"
     },
-    "Function  Expression": {
+    "Function Expression": {
         "prefix": "ajs-function-expression",
         "body": [
-            "function (${2:Parameters}) {",
+            "${1|function,async function|} (${2:Parameters}) {",
             "    ${TM_SELECTED_TEXT}$0",
             "}"
         ],
@@ -39,11 +39,11 @@
         "description": "Create a new arrow function at your cursor"
     },
     "Immediately Invoked Function Expression (IIFE)": {
-        "prefix": "ajs-immediately-invoked-function-expression",
+        "prefix": "ajs-iife-immediately-invoked-function-expression",
         "body": [
             "(function (${1:Parameters}) {",
             "    ${TM_SELECTED_TEXT}$0",
-            "})($1)"
+            "})($1);"
         ],
         "description": "Create a new IIFE at your cursor or around a selection"
     },
@@ -105,7 +105,34 @@
     "Loop For": {
         "prefix": "ajs-loop-for",
         "body": [
-            "for (let ${1:i = ${2:Initial Value}}; ${3:i ${4|<,>|} ${5:array.length}}; ${6:i ${7|++,--|}}) {",
+            "for (${1:${2|let,var|} ${3:i} = ${4:Initial Value}}; ${5:$3 ${6|<,>,<=,>=|} ${7:array.length}}; ${8:$3 ${9|++,--|}}) {",
+            "    ${TM_SELECTED_TEXT}$0",
+            "}"
+        ],
+        "description": "Create a for loop at your current cursor position or around a selection"
+    },
+    "Loop For-In": {
+        "prefix": "ajs-loop-for-in",
+        "body": [
+            "for (${1:${2|let,var|} ${3:Property Variable}} in ${2:Object Name}) {",
+            "    ${TM_SELECTED_TEXT}$0",
+            "}"
+        ],
+        "description": "Create a for-in loop at your current cursor position or around a selection"
+    },
+    "Loop For-Of": {
+        "prefix": "ajs-loop-for-of",
+        "body": [
+            "for (${1:${2|let,var|} ${3:Property Variable}} of ${2:Object Name}) {",
+            "    ${TM_SELECTED_TEXT}$0",
+            "}"
+        ],
+        "description": "Create a for-of loop at your current cursor position or around a selection"
+    },
+    "Loop While": {
+        "prefix": "ajs-loop-while",
+        "body": [
+            "while (${1:Condition}) {",
             "    ${TM_SELECTED_TEXT}$0",
             "}"
         ],
@@ -114,14 +141,21 @@
     "String Literal": {
         "prefix": "ajs-string-literal",
         "body": [
-            "${1|',`,\"|}$0${1}"
+            "'$0'"
+        ],
+        "description": "Insert a string literal at your cursor"
+    },
+    "String -- Template Literal": {
+        "prefix": "ajs-string-template-literal",
+        "body": [
+            "`$0`"
         ],
         "description": "Insert a string literal at your cursor"
     },
     "String -- Template Variable": {
         "prefix": "ajs-string-template-variable",
         "body": [
-            "${$0}"
+            "${${1:Expression}}"
         ],
         "description": "Insert a template literal variable at your cursor"
     },
@@ -130,6 +164,43 @@
         "body": [
             "console.${1|log,debug,error,assert|}(${2:Message});"
         ],
-        "description": "Insert a new console log at your cursor"
+        "description": "Insert a new console call at your cursor"
+    },
+    "Log -- Console Log Shortcut": {
+        "prefix": "ajs-console-log",
+        "body": [
+            "console.log(${1:Arguments});"
+        ],
+        "description": "Insert a new console.log call at your cursor"
+    },
+    "Array": {
+        "prefix": "ajs-array",
+        "body": [
+            "[$0]"
+        ],
+        "description": "Insert a new array at your cursor"
+    },
+    "Object Literal": {
+        "prefix": "ajs-object-literal",
+        "body": [
+            "{",
+            "    $0",
+            "}"
+        ],
+        "description": "Insert an object literal at your cursor"
+    },
+    "Property": {
+        "prefix": "ajs-property",
+        "body": [
+            "${1:Property Name}: ${2:Property Value},"
+        ],
+        "description": "Insert object literal property at cursor"
+    },
+    "Return": {
+        "prefix": "ajs-return",
+        "body": [
+            "return ${TM_SELECTED_TEXT}$0"
+        ],
+        "description": "Return an expression or variable"
     }
 }

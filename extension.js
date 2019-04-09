@@ -1,11 +1,23 @@
-const vscode = require('vscode');
 
-function activate(context) {}
-exports.activate = activate;
+function activate(context) {
+	const container = require('./container');
 
-function deactivate() {}
+	const vscode = container.build('vsCodeFactory').getInstance();
 
-module.exports = {
-	activate,
-	deactivate
+	context.subscriptions.push(
+		vscode.commands.registerCommand(
+			'cmstead.articulate-js.surroundWith',
+			() => container.build('surroundWith').applySurround()
+		));
+
+	context.subscriptions.push(
+		vscode.commands.registerCommand(
+			'cmstead.articulate-js.return',
+			() => container.build('returnAction').applyReturn()
+		));
 }
+
+function deactivate() { }
+
+exports.activate = activate;
+exports.deactivate = deactivate;

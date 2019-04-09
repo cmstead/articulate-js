@@ -11,26 +11,94 @@
 		"Other"
 	],
 	"activationEvents": [
+		"onCommand:cmstead.articulate-js.surroundWith",
+		"onCommand:cmstead.articulate-js.return"
 	],
-	"main": "./extension.js",
+	"main": "./extension",
 	"contributes": {
-		"commands": [],
+		"languages": [
+			{
+				"id": "javascript",
+				"extensions": [
+					".js",
+					".vue"
+				],
+				"aliases": [
+					"JS"
+				]
+			},
+			{
+				"id": "html",
+				"extensions": [
+					".htm",
+					".html"
+				],
+				"aliases": [
+					"HTML"
+				]
+			}
+		],
+		"commands": [
+			{
+				"command": "cmstead.articulate-js.surroundWith",
+				"title": "Articulate JS: Surround With",
+				"description": "Surround Selection With Snippet Option"
+			},
+			{
+				"command": "cmstead.articulate-js.return",
+				"title": "Articulate JS: Return",
+				"description": "Return selection or current position"
+			}
+		],
 		"snippets": [
 			{
 				"language": "javascript",
 				"path": "./snippets/articulate-js.json"
 			}
-		]
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "cmstead.articulate-js.return",
+					"when": "editorLangId == javascript"
+				},
+				{
+					"command": "cmstead.articulate-js.surroundWith",
+					"when": "editorLangId == javascript && editorHasSelection"
+				}
+			],
+			"editor/context": [
+				{
+					"command": "cmstead.articulate-js.return",
+					"group": "4_articulate_js",
+					"when": "editorLangId == javascript"
+				},
+				{
+					"command": "cmstead.articulate-js.surroundWith",
+					"group": "4_articulate_js",
+					"when": "editorLangId == javascript && editorHasSelection"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"postinstall": "node ./node_modules/vscode/bin/install",
 		"test": "node ./node_modules/vscode/bin/test"
 	},
 	"devDependencies": {
-		"typescript": "^3.3.1",
-		"vscode": "^1.1.28",
-		"eslint": "^5.13.0",
+		"@types/mocha": "^2.2.42",
 		"@types/node": "^10.12.21",
-		"@types/mocha": "^2.2.42"
+		"approvals": "^3.0.5",
+		"chai": "^4.2.0",
+		"eslint": "^5.13.0",
+		"mocha": "^6.1.2",
+		"sinon": "^7.3.1",
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.28"
+	},
+	"dependencies": {
+		"dject": "^1.13.3",
+		"espree": "^5.0.1",
+		"estraverse": "^4.2.0"
 	}
 }
