@@ -18,6 +18,22 @@ Articulate JS is a tool to help developers talk about code and write software in
 
 ## Using Articulate JS ##
 
+### Actions ###
+
+All of these actions are available in the command pallette and in the context (right click) menu.
+
+**Surround With**
+
+Surround selection with one of many different snippets
+
+**Return**
+
+Add return at current position or return selection
+
+**Assign**
+
+Add assignment declaration at current position or assign current selection to a variable
+
 ### Snippets ###
 
 The bulk of Articulate JS is currently snippets.  These snippets are built with the maximum amount of assistance possible, including supporting capturing highlighted text for inclusion in the output code, selection dropdowns for common options and so on.  Be sure to tab through all tab-stopped options to see what kind of assistance the snippets can provide.
