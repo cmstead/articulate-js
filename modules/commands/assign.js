@@ -1,10 +1,10 @@
-function returnAction(
+function assign(
     snippets,
     vsCodeFactory
 ) {
 
-    function isReturnSnippet(snippetKey) {
-        return snippetKey.toLowerCase().includes('return');
+    function isAssignmentSnippet(snippetKey) {
+        return snippetKey.toLowerCase().includes('assignment');
     }
 
     function getSelectionRange(vscode, selection) {
@@ -15,14 +15,14 @@ function returnAction(
     }
 
     function getSnippetString(vscode) {
-        const snippetKey = Object.keys(snippets).filter(isReturnSnippet)[0];
+        const snippetKey = Object.keys(snippets).filter(isAssignmentSnippet)[0];
         const snippet = snippets[snippetKey];
         const snippetString = snippet.body.join('\n');
 
         return new vscode.SnippetString(snippetString);
     }
 
-    function applyReturnAction(vscode) {
+    function applyAssignmentAction(vscode) {
         const activeTextEditor = vscode.window.activeTextEditor;
         const selection = activeTextEditor._selections[0];
 
@@ -35,7 +35,7 @@ function returnAction(
     function applyReturn() {
         const vscode = vsCodeFactory.getInstance();
 
-        applyReturnAction(vscode);
+        applyAssignmentAction(vscode);
     }
 
     return {
@@ -43,4 +43,4 @@ function returnAction(
     };
 }
 
-module.exports = returnAction;
+module.exports = assign;

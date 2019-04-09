@@ -2,7 +2,7 @@
     "Variable Initialization": {
         "prefix": "ajs-variable-initialization",
         "body": [
-            "${1|const,let,var|} ${2:Variable Name} = ${3:Variable Value};"
+            "${1|const,let,var|} ${2:Variable Name} = ${TM_SELECTED_TEXT}$0;"
         ],
         "description": "Initialize a new variable at your cursor"
     },
@@ -12,6 +12,13 @@
             "${1|const,let,var|} ${2:Variable Name};"
         ],
         "description": "Declare a variable at your cursor"
+    },
+    "Variable Assignment/Set": {
+        "prefix": "ajs-variable-assignment-set",
+        "body": [
+            "${1:Variable Name} = ${TM_SELECTED_TEXT}$0"
+        ],
+        "description": "Assign a value to a variable/Set variable value"
     },
     "Function Definition": {
         "prefix": "ajs-function-definition",
@@ -202,5 +209,32 @@
             "return ${TM_SELECTED_TEXT}$0"
         ],
         "description": "Return an expression or variable"
+    },
+    "Promise": {
+        "prefix": "ajs-promise",
+        "body": [
+            "new Promise(function (resolve, reject) {",
+            "    ${TM_SELECTED_TEXT}$0",
+            "});"
+        ],
+        "description": "Insert a new promise around selection or at cursor"
+    },
+    "Promise -- Then": {
+        "prefix": "ajs-then-promise",
+        "body": [
+            "then(function(${1:Result}){",
+            "    ${TM_SELECTED_TEXT}$0",
+            "})"
+        ],
+        "description": "Insert a new then call against a promise"
+    },
+    "Promise -- Catch": {
+        "prefix": "ajs-catch-promise",
+        "body": [
+            "catch(function(${1:Error}){",
+            "    ${TM_SELECTED_TEXT}$0",
+            "})"
+        ],
+        "description": "Insert a new catch call against a promise"
     }
 }

@@ -17,6 +17,7 @@ function surroundWith(
 
     function doesSnippetIncludeSelection(snippetKey) {
         return !snippetKey.toLowerCase().includes('return')
+            && !snippetKey.toLowerCase().includes('assignment')
             && includesSelectionInBody(snippets, snippetKey);
     }
 

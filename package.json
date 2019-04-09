@@ -11,8 +11,9 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:cmstead.articulate-js.surroundWith",
-		"onCommand:cmstead.articulate-js.return"
+		"onCommand:cmstead.articulate-js.assign",
+		"onCommand:cmstead.articulate-js.return",
+		"onCommand:cmstead.articulate-js.surroundWith"
 	],
 	"main": "./extension",
 	"contributes": {
@@ -40,43 +41,88 @@
 		],
 		"commands": [
 			{
-				"command": "cmstead.articulate-js.surroundWith",
-				"title": "Articulate JS: Surround With",
-				"description": "Surround Selection With Snippet Option"
+				"command": "cmstead.articulate-js.assign",
+				"title": "Articulate JS: Assign To Variable",
+				"description": "Assign selection or position to a variable"
 			},
 			{
 				"command": "cmstead.articulate-js.return",
 				"title": "Articulate JS: Return",
 				"description": "Return selection or current position"
+			},
+			{
+				"command": "cmstead.articulate-js.surroundWith",
+				"title": "Articulate JS: Surround With",
+				"description": "Surround Selection With Snippet Option"
 			}
 		],
 		"snippets": [
 			{
 				"language": "javascript",
 				"path": "./snippets/articulate-js.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/articulate-js.json"
 			}
 		],
 		"menus": {
 			"commandPalette": [
 				{
+					"command": "cmstead.articulate-js.assign",
+					"when": "editorLangId == javascript"
+				},
+				{
+					"command": "cmstead.articulate-js.assign",
+					"when": "editorLangId == html"
+				},
+				{
 					"command": "cmstead.articulate-js.return",
 					"when": "editorLangId == javascript"
 				},
 				{
+					"command": "cmstead.articulate-js.return",
+					"when": "editorLangId == html"
+				},
+				{
 					"command": "cmstead.articulate-js.surroundWith",
 					"when": "editorLangId == javascript && editorHasSelection"
+				},
+				{
+					"command": "cmstead.articulate-js.surroundWith",
+					"when": "editorLangId == html && editorHasSelection"
 				}
 			],
 			"editor/context": [
 				{
+					"command": "cmstead.articulate-js.assign",
+					"group": "4_articulate_js",
+					"when": "editorLangId == javascript"
+				},
+				{
+					"command": "cmstead.articulate-js.assign",
+					"group": "4_articulate_js",
+					"when": "editorLangId == html"
+				},
+				{
 					"command": "cmstead.articulate-js.return",
 					"group": "4_articulate_js",
 					"when": "editorLangId == javascript"
 				},
 				{
+					"command": "cmstead.articulate-js.return",
+					"group": "4_articulate_js",
+					"when": "editorLangId == html"
+				},
+				{
 					"command": "cmstead.articulate-js.surroundWith",
 					"group": "4_articulate_js",
 					"when": "editorLangId == javascript && editorHasSelection"
+				},
+				{
+					"command": "cmstead.articulate-js.surroundWith",
+					"group": "4_articulate_js",
+					"when": "editorLangId == html && editorHasSelection"
 				}
 			]
 		}

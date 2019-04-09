@@ -6,8 +6,8 @@ function activate(context) {
 
 	context.subscriptions.push(
 		vscode.commands.registerCommand(
-			'cmstead.articulate-js.surroundWith',
-			() => container.build('surroundWith').applySurround()
+			'cmstead.articulate-js.assign',
+			() => container.build('assign').applyReturn()
 		));
 
 	context.subscriptions.push(
@@ -15,6 +15,13 @@ function activate(context) {
 			'cmstead.articulate-js.return',
 			() => container.build('returnAction').applyReturn()
 		));
+
+	context.subscriptions.push(
+		vscode.commands.registerCommand(
+			'cmstead.articulate-js.surroundWith',
+			() => container.build('surroundWith').applySurround()
+		));
+
 }
 
 function deactivate() { }
