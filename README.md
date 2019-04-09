@@ -22,25 +22,54 @@ Articulate JS is a tool to help developers talk about code and write software in
 
 The bulk of Articulate JS is currently snippets.  These snippets are built with the maximum amount of assistance possible, including supporting capturing highlighted text for inclusion in the output code, selection dropdowns for common options and so on.  Be sure to tab through all tab-stopped options to see what kind of assistance the snippets can provide.
 
-- Variable Initialization
-- Variable Declaration
-- Function Definition
-- Function  Expression
+- Variable
+    - Initialization
+    - Declaration
+    - Assignment/Set
+- Function
+    - Definition
+    - Expression
+    - Calling
+    - Call with context
+    - Binding
+    - Applicationg
 - Arrow Function
 - Immediately Invoked Function Expression (IIFE)
-- Function Call
-- Function Call With Context
-- Function Binding
-- Function Application
-- If Block
-- Else-If Block
-- Else Block
-- Loop For
-- String Literal
-- String -- Template Variable
-- Console Method Call
+- Conditionals
+    - If Block
+    - Else-If Block
+    - Else Block
+- Loop
+    - For
+    - For-In
+    - For-Of
+    - While
+- Strings
+    - String Literal
+    - Template Literal
+    - Template Variable
+- Console
+    - Methods (Log, Debug, Error)
+    - Log
+- Array
+- Object
+    - Literal
+    - Property
+- Return
+- Promise
+    - New Instance
+    - Then
+    - Catch
+
 
 ## Version History ##
+
+**v1.1.1**
+
+- Fleshed out more templates
+- Added "Surround With" behavior
+- Added "Return" behavior
+- Added "Assign" behavior
 
 **v1.0.0**
 
