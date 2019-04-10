@@ -1,6 +1,7 @@
 # Articulate JS #
+## Code Like You Talk ##
 
-Articulate JS is a tool to help developers talk about code and write software in a conversational way. The goal is, not only, to make pairing and mobbing easier while working with Javascript, but to also create a meta-interface for developers to use which will provide the following benefits:
+Articulate JS is a tool to help developers talk about code and write software in a more conversational way. The goal is, not only, to make pairing and mobbing easier while working with Javascript, but to also create a meta-interface for developers to use which will provide the following benefits:
 
 - Make code structure more consistent
 - Separate logical flow from syntax specifics

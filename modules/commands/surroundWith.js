@@ -15,10 +15,33 @@ function surroundWith(
         return typeof foundLine === 'string';
     }
 
+    function isAcceptablePromiseKey(snippetKey) {
+        return snippetKey.includes('promise')
+            && !snippetKey.includes('catch')
+            && !snippetKey.includes('then');
+    }
+
+    function isAcceptableCatch(snippetKey) {
+        return snippetKey.includes('catch')
+            && !snippetKey.includes('promise');
+    }
+
+    function isAcceptableSnippetKey(snippetKey) {
+        return !snippetKey.includes('return')
+            && !snippetKey.includes('assignment')
+            && !snippetKey.includes('else')
+            && !snippetKey.includes('catch')
+            && !snippetKey.includes('then')
+            && !snippetKey.includes('variable');
+    }
+
     function doesSnippetIncludeSelection(snippetKey) {
-        return !snippetKey.toLowerCase().includes('return')
-            && !snippetKey.toLowerCase().includes('assignment')
-            && includesSelectionInBody(snippets, snippetKey);
+        const lowerCaseKey = snippetKey.toLowerCase();
+
+        return includesSelectionInBody(snippets, snippetKey)
+            && (isAcceptablePromiseKey(lowerCaseKey)
+                || isAcceptableCatch(lowerCaseKey)
+                || isAcceptableSnippetKey(lowerCaseKey));
     }
 
     function addSnippetToMap(surroundingSnippets, snippetKey) {

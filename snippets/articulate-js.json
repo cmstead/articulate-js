@@ -1,27 +1,27 @@
 {
     "Variable Initialization": {
-        "prefix": "ajs-variable-initialization",
+        "prefix": "ajs-create-variable-initialization",
         "body": [
             "${1|const,let,var|} ${2:Variable Name} = ${TM_SELECTED_TEXT}$0;"
         ],
         "description": "Initialize a new variable at your cursor"
     },
     "Variable Declaration": {
-        "prefix": "ajs-variable-declaration",
+        "prefix": "ajs-create-variable-declaration",
         "body": [
             "${1|const,let,var|} ${2:Variable Name};"
         ],
         "description": "Declare a variable at your cursor"
     },
     "Variable Assignment/Set": {
-        "prefix": "ajs-variable-assignment-set",
+        "prefix": "ajs-set-variable-assignment",
         "body": [
             "${1:Variable Name} = ${TM_SELECTED_TEXT}$0"
         ],
         "description": "Assign a value to a variable/Set variable value"
     },
     "Function Definition": {
-        "prefix": "ajs-function-definition",
+        "prefix": "ajs-create-function-definition",
         "body": [
             "${1|function,async function|} ${2:Function Name} (${3:Parameters}) {",
             "    ${TM_SELECTED_TEXT}$0",
@@ -30,7 +30,7 @@
         "description": "Create a new named function definition at your cursor or around a selection"
     },
     "Function Expression": {
-        "prefix": "ajs-function-expression",
+        "prefix": "ajs-create-function-expression",
         "body": [
             "${1|function,async function|} (${2:Parameters}) {",
             "    ${TM_SELECTED_TEXT}$0",
@@ -39,14 +39,14 @@
         "description": "Create a new function expression at your cursor or around a selection"
     },
     "Arrow Function": {
-        "prefix": "ajs-arrow-function",
+        "prefix": "ajs-create-arrow-function",
         "body": [
             "(${1:Parameters}) => $0"
         ],
         "description": "Create a new arrow function at your cursor"
     },
     "Immediately Invoked Function Expression (IIFE)": {
-        "prefix": "ajs-iife-immediately-invoked-function-expression",
+        "prefix": "ajs-create-iife-immediately-invoked-function-expression",
         "body": [
             "(function (${1:Parameters}) {",
             "    ${TM_SELECTED_TEXT}$0",
@@ -55,35 +55,35 @@
         "description": "Create a new IIFE at your cursor or around a selection"
     },
     "Function Call": {
-        "prefix": "ajs-function-call",
+        "prefix": "ajs-add-call-function",
         "body": [
             "${1:Function Name}(${2:Arguments})"
         ],
         "description": "Create a new call to a function at your cursor"
     },
     "Function Call With Context": {
-        "prefix": "ajs-function-call-with-context",
+        "prefix": "ajs-call-function-with-context",
         "body": [
             "${1:Function Name}.call(${2:Context}, ${3:Arguments})"
         ],
         "description": "Create new function call with object context at cursor"
     },
-    "Function Binding": {
-        "prefix": "ajs-function-binding",
+    "Function Bind": {
+        "prefix": "ajs-bind-function",
         "body": [
             "${1:Function Name}.bind(${2:Context}, ${3:Arguments})"
         ],
         "description": "Create new function binding at cursor"
     },
-    "Function Application": {
-        "prefix": "ajs-function-application",
+    "Function Apply": {
+        "prefix": "ajs-apply-function",
         "body": [
             "${1:Function Name}.apply(${2:Context}, [${3:Arguments}])"
         ],
         "description": "Create new function application at cursor"
     },
     "If Block": {
-        "prefix": "ajs-if-block",
+        "prefix": "ajs-create-if-block",
         "body": [
             "if (${1:Condition}) {",
             "    ${TM_SELECTED_TEXT}$0",
@@ -92,7 +92,7 @@
         "description": "Create a new if block at your cursor or around a selection"
     },
     "Else-If Block": {
-        "prefix": "ajs-else-if-block",
+        "prefix": "ajs-add-else-if-block",
         "body": [
             "else (${1:Condition}) {",
             "    ${TM_SELECTED_TEXT}$0",
@@ -101,7 +101,7 @@
         "description": "Create a new else block at your cursor or around a selection"
     },
     "Else Block": {
-        "prefix": "ajs-else-block",
+        "prefix": "ajs-add-else-block",
         "body": [
             "else {",
             "    ${TM_SELECTED_TEXT}$0",
@@ -110,7 +110,7 @@
         "description": "Create a new else block at your cursor or around a selection"
     },
     "Loop For": {
-        "prefix": "ajs-loop-for",
+        "prefix": "ajs-create-loop-for",
         "body": [
             "for (${1:${2|let,var|} ${3:i} = ${4:Initial Value}}; ${5:$3 ${6|<,>,<=,>=|} ${7:array.length}}; ${8:$3 ${9|++,--|}}) {",
             "    ${TM_SELECTED_TEXT}$0",
@@ -119,7 +119,7 @@
         "description": "Create a for loop at your current cursor position or around a selection"
     },
     "Loop For-In": {
-        "prefix": "ajs-loop-for-in",
+        "prefix": "ajs-create-loop-for-in",
         "body": [
             "for (${1:${2|let,var|} ${3:Property Variable}} in ${2:Object Name}) {",
             "    ${TM_SELECTED_TEXT}$0",
@@ -128,7 +128,7 @@
         "description": "Create a for-in loop at your current cursor position or around a selection"
     },
     "Loop For-Of": {
-        "prefix": "ajs-loop-for-of",
+        "prefix": "ajs-create-loop-for-of",
         "body": [
             "for (${1:${2|let,var|} ${3:Property Variable}} of ${2:Object Name}) {",
             "    ${TM_SELECTED_TEXT}$0",
@@ -137,7 +137,7 @@
         "description": "Create a for-of loop at your current cursor position or around a selection"
     },
     "Loop While": {
-        "prefix": "ajs-loop-while",
+        "prefix": "ajs-create-loop-while",
         "body": [
             "while (${1:Condition}) {",
             "    ${TM_SELECTED_TEXT}$0",
@@ -146,28 +146,28 @@
         "description": "Create a for loop at your current cursor position or around a selection"
     },
     "String Literal": {
-        "prefix": "ajs-string-literal",
+        "prefix": "ajs-create-string-literal",
         "body": [
             "'$0'"
         ],
         "description": "Insert a string literal at your cursor"
     },
     "String -- Template Literal": {
-        "prefix": "ajs-string-template-literal",
+        "prefix": "ajs-create-string-template-literal",
         "body": [
             "`$0`"
         ],
         "description": "Insert a string literal at your cursor"
     },
     "String -- Template Variable": {
-        "prefix": "ajs-string-template-variable",
+        "prefix": "ajs-add-string-template-variable",
         "body": [
             "${${1:Expression}}"
         ],
         "description": "Insert a template literal variable at your cursor"
     },
-    "Console Method Call": {
-        "prefix": "ajs-console-method-call",
+    "Console -- Common Methods": {
+        "prefix": "ajs-console-call-method",
         "body": [
             "console.${1|log,debug,error,assert|}(${2:Message});"
         ],
@@ -180,6 +180,13 @@
         ],
         "description": "Insert a new console.log call at your cursor"
     },
+    "Callback": {
+        "prefix": "ajs-callback-call",
+        "body": [
+            "${1:Callback Name}(${2:Error}, ${3:Arguments});"
+        ],
+        "description": "Call a callback at your cursor"
+    },
     "Array": {
         "prefix": "ajs-array",
         "body": [
@@ -188,7 +195,7 @@
         "description": "Insert a new array at your cursor"
     },
     "Object Literal": {
-        "prefix": "ajs-object-literal",
+        "prefix": "ajs-create-object-literal",
         "body": [
             "{",
             "    $0",
@@ -197,11 +204,20 @@
         "description": "Insert an object literal at your cursor"
     },
     "Property": {
-        "prefix": "ajs-property",
+        "prefix": "ajs-add-property",
         "body": [
             "${1:Property Name}: ${2:Property Value},"
         ],
         "description": "Insert object literal property at cursor"
+    },
+    "Property -- Function": {
+        "prefix": "ajs-add-property-function",
+        "body": [
+            "${1:Property Name}: function(${2:Parameters}){",
+            "    $0",
+            "}"
+        ],
+        "description": "Add a function property to an existing object literal"
     },
     "Return": {
         "prefix": "ajs-return",
@@ -211,7 +227,7 @@
         "description": "Return an expression or variable"
     },
     "Promise": {
-        "prefix": "ajs-promise",
+        "prefix": "ajs-create-promise",
         "body": [
             "new Promise(function (resolve, reject) {",
             "    ${TM_SELECTED_TEXT}$0",
@@ -220,7 +236,7 @@
         "description": "Insert a new promise around selection or at cursor"
     },
     "Promise -- Then": {
-        "prefix": "ajs-then-promise",
+        "prefix": "ajs-add-then-promise",
         "body": [
             "then(function(${1:Result}){",
             "    ${TM_SELECTED_TEXT}$0",
@@ -229,12 +245,95 @@
         "description": "Insert a new then call against a promise"
     },
     "Promise -- Catch": {
-        "prefix": "ajs-catch-promise",
+        "prefix": "ajs-add-catch-promise",
         "body": [
             "catch(function(${1:Error}){",
             "    ${TM_SELECTED_TEXT}$0",
             "})"
         ],
         "description": "Insert a new catch call against a promise"
+    },
+    "Class": {
+        "prefix": "ajs-create-class",
+        "body": [
+            "class ${1:Class Name} ${2:extends ${3:SuperClass Name} }{",
+            "    constructor (${5:Parameters}){",
+            "        ${6:super($5);}",
+            "    }",
+            "    ",
+            "    $0",
+            "}"
+        ],
+        "description": "Create a new class at the current cursor position"
+    },
+    "Class -- Constructor": {
+        "prefix": "ajs-add-class-constructor",
+        "body": [
+            "constructor (${1:Parameters}) {",
+            "    ${2:super($1);}$0",
+            "}"
+        ],
+        "description": "Add a constructor to an existing class"
+    },
+    "Class -- method": {
+        "prefix": "ajs-add-class-method",
+        "body": [
+            "${1:Method Name} (${2:Parameters}) {",
+            "    $0",
+            "}"
+        ],
+        "description": "Add a method to an existing class"
+    },
+    "Method Call": {
+        "prefix": "ajs-add-call-method",
+        "body": [
+            "${1:${2|Object Name,this|}}.${3:Method Name}(${4:Arguments})"
+        ],
+        "description": "Add a call to an existing method"
+    },
+    "Await -- Method Call": {
+        "prefix": "ajs-add-call-method-await",
+        "body": [
+            "await ${1:${2|Object Name,this|}}.${3:Method Name}(${4:Arguments})"
+        ],
+        "description": "Add an awaited call to an existing method"
+    },
+    "Await -- Function Call": {
+        "prefix": "ajs-add-call-function-await",
+        "body": [
+            "await ${1:Function Name}(${2:Arguments})"
+        ],
+        "description": "Add an awaited call to an existing function"
+    },
+    "Object Prototype": {
+        "prefix": "ajs-create-object-prototype",
+        "body": [
+            "function ${1:Object Name} (${2:Parameters}) {",
+            "    $3",
+            "}",
+            "",
+            "$1.prototype = {",
+            "    $0",
+            "}"
+        ],
+        "description": "Create a new object prototype with constructor"
+    },
+    "Assign Property": {
+        "prefix": "ajs-add-assign-property",
+        "body": [
+            "${1:${2|Object Name,this|}}.${3:Property Name} = ${4:Value};"
+        ],
+        "description": "Add property assignment"
+    },
+    "Try/Catch": {
+        "prefix": "ajs-create-try-catch",
+        "body": [
+            "try {",
+            "    ${TM_SELECTED_TEXT}$1",
+            "} catch (${2:e}) {",
+            "    $0",
+            "}"
+        ],
+        "description": "Create new try/catch block"
     }
 }
