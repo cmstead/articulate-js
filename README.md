@@ -10,7 +10,7 @@ Articulate JS is a tool to help developers talk about code and write software in
 - Automate common small code modifications
 
 [![Articulate JS In Use](https://img.youtube.com/vi/ufiQuqXXDXc/0.jpg)](https://youtu.be/ufiQuqXXDXc)
-
+(Click image to see Articulate JS in action!)
 
 ## Installing Articulate JS ##
 
@@ -18,7 +18,7 @@ Articulate JS is a tool to help developers talk about code and write software in
 2. Open extension sidebar item
 3. Search for `Articulate JS`
 4. Click **install** button
-5. Click **reload** to complete installation
+5. Click **reload** to complete installation (as needed)
 
 ## Using Articulate JS ##
 
@@ -53,6 +53,7 @@ The bulk of Articulate JS is currently snippets.  These snippets are built with 
     - Call with context
     - Binding
     - Applicationg
+    - Awaited calling
 - Arrow Function
 - Immediately Invoked Function Expression (IIFE)
 - Conditionals
@@ -80,9 +81,21 @@ The bulk of Articulate JS is currently snippets.  These snippets are built with 
     - New Instance
     - Then
     - Catch
+- Class
+    - Create class
+    - Add constructor
+    - Add method
+    - Awaited method calling
+- Try/Catch
 
 
 ## Version History ##
+
+**v1.2.1**
+
+- Added class support
+- Added await support for calls
+- Added try/catch
 
 **v1.1.1**
 
