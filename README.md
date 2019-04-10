@@ -9,9 +9,12 @@ Articulate JS is a tool to help developers talk about code and write software in
 - Automate code generation through common language and vocabulary
 - Automate common small code modifications
 
+[![Articulate JS In Use](https://img.youtube.com/vi/ufiQuqXXDXc/0.jpg)](https://youtu.be/ufiQuqXXDXc)
+
+
 ## Installing Articulate JS ##
 
-1. Open Visual Studio Code
+1. Open Visual Studio Code1
 2. Open extension sidebar item
 3. Search for `Articulate JS`
 4. Click **install** button
