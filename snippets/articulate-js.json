@@ -57,14 +57,14 @@
     "Function Call": {
         "prefix": "ajs-add-call-function",
         "body": [
-            "${1:Function Name}(${2:Arguments})"
+            "${1:Function Name}($2${TM_SELECTED_TEXT})"
         ],
         "description": "Create a new call to a function at your cursor"
     },
     "Function Call With Context": {
         "prefix": "ajs-call-function-with-context",
         "body": [
-            "${1:Function Name}.call(${2:Context}, ${3:Arguments})"
+            "${1:Function Name}.call(${2:Context}, $3${TM_SELECTED_TEXT})"
         ],
         "description": "Create new function call with object context at cursor"
     },
@@ -206,7 +206,7 @@
     "Property": {
         "prefix": "ajs-add-property",
         "body": [
-            "${1:Property Name}: ${2:Property Value},"
+            "${1:Property Name}: ${2:Property Value}"
         ],
         "description": "Insert object literal property at cursor"
     },
@@ -287,21 +287,21 @@
     "Method Call": {
         "prefix": "ajs-add-call-method",
         "body": [
-            "${1:${2|Object Name,this|}}.${3:Method Name}(${4:Arguments})"
+            "${1:${2|Object Name,this|}}.${3:Method Name}($4${TM_SELECTED_TEXT})"
         ],
         "description": "Add a call to an existing method"
     },
     "Await -- Method Call": {
         "prefix": "ajs-add-call-method-await",
         "body": [
-            "await ${1:${2|Object Name,this|}}.${3:Method Name}(${4:Arguments})"
+            "await ${1:${2|Object Name,this|}}.${3:Method Name}($4${TM_SELECTED_TEXT})"
         ],
         "description": "Add an awaited call to an existing method"
     },
     "Await -- Function Call": {
         "prefix": "ajs-add-call-function-await",
         "body": [
-            "await ${1:Function Name}(${2:Arguments})"
+            "await ${1:Function Name}($2${TM_SELECTED_TEXT})"
         ],
         "description": "Add an awaited call to an existing function"
     },
