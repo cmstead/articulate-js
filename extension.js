@@ -12,6 +12,12 @@ function activate(context) {
 
 	context.subscriptions.push(
 		vscode.commands.registerCommand(
+			'cmstead.articulate-js.convertVariableType',
+			() => container.build('convertVariableType').applyConversion()
+		));
+
+	context.subscriptions.push(
+		vscode.commands.registerCommand(
 			'cmstead.articulate-js.return',
 			() => container.build('returnAction').applyReturn()
 		));

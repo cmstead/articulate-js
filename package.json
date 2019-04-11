@@ -17,6 +17,7 @@
 	"icon": "images/articulate-js.png",
 	"activationEvents": [
 		"onCommand:cmstead.articulate-js.assign",
+		"onCommand:cmstead.articulate-js.convertVariableType",
 		"onCommand:cmstead.articulate-js.return",
 		"onCommand:cmstead.articulate-js.surroundWith"
 	],
@@ -51,6 +52,11 @@
 				"description": "Assign selection or position to a variable"
 			},
 			{
+				"command": "cmstead.articulate-js.convertVariableType",
+				"title": "Articulate JS: Convert Variable Type",
+				"description": "Convert variable type between var, let, and const"
+			},
+			{
 				"command": "cmstead.articulate-js.return",
 				"title": "Articulate JS: Return",
 				"description": "Return selection or current position"
@@ -82,6 +88,14 @@
 					"when": "editorLangId == html"
 				},
 				{
+					"command": "cmstead.articulate-js.convertVariableType",
+					"when": "editorLangId == javascript"
+				},
+				{
+					"command": "cmstead.articulate-js.convertVariableType",
+					"when": "editorLangId == html"
+				},
+				{
 					"command": "cmstead.articulate-js.return",
 					"when": "editorLangId == javascript"
 				},
@@ -106,6 +120,16 @@
 				},
 				{
 					"command": "cmstead.articulate-js.assign",
+					"group": "4_articulate_js",
+					"when": "editorLangId == html"
+				},
+				{
+					"command": "cmstead.articulate-js.convertVariableType",
+					"group": "4_articulate_js",
+					"when": "editorLangId == javascript"
+				},
+				{
+					"command": "cmstead.articulate-js.convertVariableType",
 					"group": "4_articulate_js",
 					"when": "editorLangId == html"
 				},
