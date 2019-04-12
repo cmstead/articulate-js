@@ -76,6 +76,10 @@ The bulk of Articulate JS is currently snippets.  These snippets are built with 
 - Object
     - Literal
     - Property
+        - Create new property
+        - Create new function property
+        - Add property assignment
+        - Add property read
 - Return
 - Promise
     - New Instance

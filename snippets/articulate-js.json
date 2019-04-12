@@ -325,6 +325,13 @@
         ],
         "description": "Add property assignment"
     },
+    "Access/Read Property": {
+        "prefix": "ajs-add-property-access-read",
+        "body": [
+            "${1:${2|Object Name,this|}}.${3:Property Name}"
+        ],
+        "description": "Add property assignment"
+    },
     "Try/Catch": {
         "prefix": "ajs-create-try-catch",
         "body": [
