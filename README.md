@@ -99,6 +99,10 @@ The bulk of Articulate JS is currently snippets.  These snippets are built with 
 
 ## Version History ##
 
+**v1.3.2**
+
+- Added convert variable type
+
 **v1.2.1**
 
 - Added class support
