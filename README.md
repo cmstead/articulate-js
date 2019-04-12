@@ -26,17 +26,21 @@ Articulate JS is a tool to help developers talk about code and write software in
 
 All of these actions are available in the command pallette and in the context (right click) menu.
 
-**Surround With**
+**Assign**
 
-Surround selection with one of many different snippets
+Add assignment declaration at current position or assign current selection to a variable
+
+**Convert Variable Type**
+
+Converts variable type to const, let, or var as you choose. Provides options which do not match the current variable type.
 
 **Return**
 
 Add return at current position or return selection
 
-**Assign**
+**Surround With**
 
-Add assignment declaration at current position or assign current selection to a variable
+Surround selection with one of many different snippets
 
 ### Snippets ###
 

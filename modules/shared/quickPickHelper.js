@@ -12,7 +12,6 @@ function quickPickHelper (
         vsCode.window
             .showQuickPick(items, quickPickOptions)
             .then((selection) => {
-                console.log('In then');
                 callback(null, selection);
             })
             .catch((error) => {
