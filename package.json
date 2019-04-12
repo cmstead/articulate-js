@@ -2,7 +2,7 @@
 	"name": "articulate-js",
 	"displayName": "Articulate JS",
 	"description": "Code Like You Talk -- Articulate JS is a tool to help developers talk about code and write software in a more conversational way. The goal is, not only, to make pairing and mobbing easier while working with Javascript, but to also create a meta-interface for developers to use",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"publisher": "cmstead",
 	"repository": {
 		"url": "https://github.com/cmstead/articulate-js.git",
